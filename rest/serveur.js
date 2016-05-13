@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost')
 
 var app = express();
 
-/* Allow localhost for dev */
+/* Allow localhost for dev, allow Access-Control-Allow-Origi from localhost:8080 */
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
