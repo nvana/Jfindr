@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 import Todo from "../components/Todo";
 import * as TodoActions from "../actions/TodoActions";
@@ -34,10 +34,10 @@ export default class Featured extends React.Component {
 
   render() {
     const { todos } = this.state;
-    /*console.log(todos)
+    console.log(todos)
     const TodoComponents = todos.map((todo) => {
         return <Todo key={todo.name} {...todo}/>;
-    });*/
+    });
 
     return (
       <div>
@@ -48,3 +48,4 @@ export default class Featured extends React.Component {
     );
   }
 }
+*/
