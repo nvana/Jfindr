@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class Todo extends React.Component {
+export default class Job extends React.Component {
   constructor(props) {
     super();
   }
