@@ -3,25 +3,16 @@ import React from "react";
 export default class Job extends React.Component {
   constructor(props) {
     super();
+    this.name = "loading"
+    this.date = "loading"
   }
 
   render() {
-    const { complete, edit, text } = this.props;
-
-    const icon = complete ? "\u2714" : "\u2716"
-
-    if (edit) {
-      return (
-        <li>
-          <input value={text} focus="focused"/>
-        </li>
-      );
-    }
 
     return (
-      <li>
-        <span>{name}</span>
-        <span>{date}</span>
+      <li class="collection-item">
+        <p>Nom du poste : {this.props.name}</p>
+        <p>Date de mise en ligne : {this.props.date}</p>
       </li>
     );
   }

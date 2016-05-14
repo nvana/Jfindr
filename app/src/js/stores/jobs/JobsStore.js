@@ -5,7 +5,7 @@ import dispatcher from "../../dispatcher";
 class JobsStore extends EventEmitter {
   constructor() {
     super()
-    //this.jobs = dispatcher.dispatch({type: "FETCH_JOBS"});
+    this.jobs = [{"name":"loading","date":"todfay"}];
   }
 
   getAll() {

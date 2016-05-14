@@ -10,15 +10,14 @@ export default class Layout extends React.Component {
 
     return (
       <div>
-
         <Nav location={location} />
 
         <div class="container">
           <div class="row">
               {this.props.children}
           </div>
-          <Footer/>
         </div>
+        <Footer/>
       </div>
 
     );

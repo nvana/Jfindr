@@ -1,6 +1,6 @@
 import dispatcher from "../../dispatcher";
  
-
+reloadTodos();
 export function createTodo(text) {
   dispatcher.dispatch({
     type: "CREATE_JOBS",
@@ -29,7 +29,3 @@ export function reloadTodos() {
         }.bind(this)
       });
 }
-
-$( document ).ready(()=>{
-  reloadTodos();
-})

@@ -2,6 +2,7 @@ import React from "react";
 
 import * as TodoActions from "../../actions/jobs/JobsAction";
 import JobsStore from "../../stores/jobs/JobsStore";
+import Job from "../../components/Job"
 
 
 export default class Featured extends React.Component {
@@ -31,15 +32,16 @@ export default class Featured extends React.Component {
 
   render() {
     const { jobs } = this.state;
+    console.log(jobs)
+      const tab = (jobs).map((job)=>{
+        return <Job key={job.id} {...job} />
+      });
+    console.log(tab)
     return (
       <div>
         <h1>List of jobs</h1>
-        <ul> { JSON.stringify(jobs, null, 2) }</ul>
         <ul class="collection">
-          <li class="collection-item">1</li>
-          <li class="collection-item">2</li>
-          <li class="collection-item">3</li>
-          <li class="collection-item">4</li>
+          {tab} 
         </ul>
       </div>
     );
