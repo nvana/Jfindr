@@ -4,8 +4,14 @@ var mongoose = restful.mongoose;
 
 // Schema
 var jobShema = mongoose.Schema({
-	name : String,
-	date : String
+	libelle : String,
+	company : String,
+	contractType : String,
+	salary : String,
+	level : String,
+	city : String,
+	author: String,
+	date : String,
 })
 
 // Model
