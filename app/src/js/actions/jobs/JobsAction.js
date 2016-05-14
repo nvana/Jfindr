@@ -1,4 +1,4 @@
-/*import dispatcher from "../../dispatcher";
+import dispatcher from "../../dispatcher";
  
 
 export function createTodo(text) {
@@ -33,4 +33,3 @@ export function reloadTodos() {
 $( document ).ready(()=>{
   reloadTodos();
 })
-*/

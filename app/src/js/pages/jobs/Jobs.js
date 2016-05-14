@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as TodoActions from "../../actions/TodoActions";
+import * as TodoActions from "../../actions/jobs/JobsAction";
 import JobsStore from "../../stores/jobs/JobsStore";
 
 
@@ -35,6 +35,12 @@ export default class Featured extends React.Component {
       <div>
         <h1>List of jobs</h1>
         <ul> { JSON.stringify(jobs, null, 2) }</ul>
+        <ul class="collection">
+          <li class="collection-item">1</li>
+          <li class="collection-item">2</li>
+          <li class="collection-item">3</li>
+          <li class="collection-item">4</li>
+        </ul>
       </div>
     );
   }

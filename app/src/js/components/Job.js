@@ -20,8 +20,8 @@ export default class Job extends React.Component {
 
     return (
       <li>
-        <span>{text}</span>
-        <span>{icon}</span>
+        <span>{name}</span>
+        <span>{date}</span>
       </li>
     );
   }
