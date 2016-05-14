@@ -16,6 +16,7 @@
     "flux": "^2.1.1",
     "history": "^1.17.0",
     "jquery": "^2.2.3",
+    "json-loader": "^0.5.4",
     "react": "^0.14.6",
     "react-ajax": "^0.1.1",
     "react-dom": "^0.14.6",

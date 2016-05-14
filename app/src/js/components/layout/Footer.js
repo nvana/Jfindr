@@ -1,5 +1,5 @@
 import React from "react";
-
+import Theme from"json!../../../assets/config.json";
 
 export default class Footer extends React.Component {
   render() {
