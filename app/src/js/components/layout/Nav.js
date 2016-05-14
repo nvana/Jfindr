@@ -23,16 +23,18 @@ export default class Nav extends React.Component {
 
     return (
       <nav class="purple darken-2">
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class={featuredClass}>
-              <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Todos</IndexLink>
-            </li>
-            <li class={jobsClass}>
-              <Link to="jobs" onClick={this.toggleCollapse.bind(this)}>Jobs</Link>
-            </li>
-          </ul>
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Jfindr</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class={featuredClass}>
+                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Todos</IndexLink>
+              </li>
+              <li class={jobsClass}>
+                <Link to="jobs" onClick={this.toggleCollapse.bind(this)}>Jobs</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     );
