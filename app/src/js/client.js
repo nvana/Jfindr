@@ -12,9 +12,8 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Layout}>
     	<IndexRoute component={Layout} />
-		<Route path="jobs" component={Jobs}>
-	        <Route path="/add" component={AddJob}/>
-	    </Route>
+		<Route path="jobs" component={Jobs}></Route>
+	    <Route path="jobs/add" component={AddJob}/>
     </Route>
   </Router>,
 app);
