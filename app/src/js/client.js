@@ -13,7 +13,7 @@ ReactDOM.render(
     <Route path="/" component={Layout}>
     	<IndexRoute component={Layout} />
 		<Route path="jobs" component={Jobs}>
-	        <Route path="/add/:id" component={AddJob}/>
+	        <Route path="/add" component={AddJob}/>
 	    </Route>
     </Route>
   </Router>,
