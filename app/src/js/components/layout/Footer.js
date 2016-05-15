@@ -4,7 +4,7 @@ import Theme from"json!../../../assets/config.json";
 export default class Footer extends React.Component {
   render() {
     return (
-      <footer class="page-footer purple darken-2">
+      <footer class="page-footer blue-grey lighten-3">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">

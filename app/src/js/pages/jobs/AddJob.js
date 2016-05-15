@@ -38,7 +38,7 @@ export default class Featured extends React.Component {
       });
     return (
       <div>
-        <h1>List of jobs</h1>
+        <h1>Add a new job</h1>
         <ul class="collection">
           {tab} 
         </ul>

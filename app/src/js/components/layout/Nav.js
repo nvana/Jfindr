@@ -19,10 +19,11 @@ export default class Nav extends React.Component {
     const { collapsed } = this.state;
     const featuredClass = location.pathname === "/" ? "active" : "";
     const jobsClass = location.pathname.match(/^\/jobs/) ? "active" : "";
+    const addJobsClass = location.pathname.match(/^\/add/) ? "active" : "";
     const navClass = collapsed ? "collapse" : "";
 
     return (
-      <nav class="purple darken-2">
+      <nav class="blue-grey lighten-1">
         <div class="container">
           <div class="nav-wrapper">
             <a href="#" class="brand-logo">Jfindr</a>
@@ -32,6 +33,9 @@ export default class Nav extends React.Component {
               </li>
               <li class={jobsClass}>
                 <Link to="jobs" onClick={this.toggleCollapse.bind(this)}>Jobs</Link>
+              </li>
+              <li class={jobsClass}>
+                <Link to="jobs/add" onClick={this.toggleCollapse.bind(this)}>Add Jobs</Link>
               </li>
             </ul>
           </div>
