@@ -16,15 +16,15 @@ export function fetchJobs() {
         }.bind(this)
       });
 }
-export function addJob(data) {
+export function addJob(form) {
     $.ajax({
         url: "http://www.localhost:3000/api/jobs",
+        data : form,
         dataType: 'json',
         type: "POST",
-        data : JSON.stringify(data),
         cache: false,
-        success: function(data) {
-           dispatcher.dispatch({type: "RECEIVE_JOBS", data});
+        success: function(form) {
+           dispatcher.dispatch({type: "RECEIVE_JOBS", form});
         }.bind(this),
         error: function(xhr, status, err) {
           console.error("http://localhost:3000/api/jobs", status, err.toString());
