@@ -21,6 +21,7 @@
     "react-ajax": "^0.1.1",
     "react-dom": "^0.14.6",
     "react-router": "^2.0.1",
+    "react-router-redux": "^4.0.4",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.1"
   },

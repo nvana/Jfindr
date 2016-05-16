@@ -17,9 +17,6 @@ export default class Nav extends React.Component {
   render() {
     const { location } = this.props;
     const { collapsed } = this.state;
-    const featuredClass = location.pathname === "/" ? "active" : "";
-    const jobsClass = location.pathname.match(/^\/jobs/) ? "active" : "";
-    const addJobsClass = location.pathname.match(/^\/add/) ? "active" : "";
     const navClass = collapsed ? "collapse" : "";
 
     return (
@@ -28,13 +25,13 @@ export default class Nav extends React.Component {
           <div class="nav-wrapper">
             <a href="#" class="brand-logo">Jfindr</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li class={featuredClass}>
+              <li>
                 <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Todos</IndexLink>
               </li>
-              <li class={jobsClass}>
-                <Link to="/jobs" onClick={this.toggleCollapse.bind(this)}>Jobs</Link>
+              <li>
+                <Link to="/jobs/all" onClick={this.toggleCollapse.bind(this)}>Jobs</Link>
               </li>
-              <li class={jobsClass}>
+              <li>
                 <Link to="/jobs/add" onClick={this.toggleCollapse.bind(this)}>Add Jobs</Link>
               </li>
             </ul>
