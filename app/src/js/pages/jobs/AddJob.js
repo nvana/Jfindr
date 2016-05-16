@@ -1,41 +1,27 @@
 import React from "react";
 
-import * as TodoActions from "../../actions/jobs/JobsAction";
+import * as JobsAction from "../../actions/jobs/JobsAction";
 import JobsStore from "../../stores/jobs/JobsStore";
 import Job from "../../components/job/job"
 
 
 export default class Featured extends React.Component {
-  constructor() {
-    super();
-    this.getJobs = this.getJobs.bind(this);
-    this.state = {
-      jobs: JobsStore.getAll(),
-    };
-  }
 
-  /* Activate listeners of store */
-  componentWillMount() {
-    JobsStore.on("change", this.getJobs);
+  handleSubmit(event) {
+    event.preventDefault()
+    JobsAction.addJob({
+   "libelle" : "Developer web Back-end",
+  "company" : "TEST",
+  "contractType" : "Alternance",
+  "salary" : "1630",
+  "level" : "Junior",
+  "city" : "Paris",
+  "author": "John Doe",
+  "date" : "21/10/2016"
+})
   }
-  componentWillUnmount() {
-    JobsStore.removeListener("change", this.getJobs);
-  }
-  /*********************************/
-
-  getJobs() {
-    this.setState({
-      jobs: JobsStore.getAll(),
-    });
-  }
-
 
   render() {
-    const { jobs } = this.state;
-    console.log(jobs)
-      const tab = (jobs).map((job)=>{
-        return <Job key={job.id} {...job} />
-      });
     return (
       <div>
         <h1>Add a new job</h1>
@@ -70,6 +56,7 @@ export default class Featured extends React.Component {
                 <input id="last_name" type="text" class="validate"/>
                 <label class="active" for="last_name">Last Name</label>
               </div>
+              <button onClick={this.handleSubmit.bind(this)} class="btn waves-effect waves-light">Submit</button>
             </div>
           </form>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as TodoActions from "../../actions/jobs/JobsAction";
+import * as JobsAction from "../../actions/jobs/JobsAction";
 import JobsStore from "../../stores/jobs/JobsStore";
 import Job from "../../components/job/job"
 
