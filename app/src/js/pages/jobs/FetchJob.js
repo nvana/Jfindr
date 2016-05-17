@@ -33,9 +33,10 @@ export default class Featured extends React.Component {
   render() {
     const { jobs } = this.state;
     console.log(jobs)
-      const tab = (jobs).map((job)=>{
-        return <Job key={job.id} {...job} />
-      });
+    const tab = (jobs).map((job)=>{
+      return <Job key={job.id} {...job} />
+    });
+
     return (
       <div>
         <h1>List of jobs</h1>
