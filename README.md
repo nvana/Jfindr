@@ -11,5 +11,7 @@ Start mongod, make sure your database is started then :
 
 ## Launching React App
 `cd app`
+
 `npm install`
+
 `npm run dev`
