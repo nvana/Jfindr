@@ -24,7 +24,7 @@ export function addJob(form) {
         type: "POST",
         cache: false,
         success: function(form) {
-           dispatcher.dispatch({type: "RECEIVE_JOBS", form});
+           dispatcher.dispatch({type: "CREATE_JOBS", form});
         }.bind(this),
         error: function(xhr, status, err) {
           console.error("http://localhost:3000/api/jobs", status, err.toString());

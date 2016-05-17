@@ -15,7 +15,7 @@ class JobsStore extends EventEmitter {
   handleActions(action) {
     switch(action.type) {
       case "CREATE_JOBS": {
-        this.createJobs(action.text);
+        this.emit("change");
         break;
       }
       case "RECEIVE_JOBS": {
