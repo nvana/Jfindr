@@ -7,8 +7,12 @@ Jfindr allow your company to easily manage your CV database. And it will make it
 | ------------- | ------------- |
 | Fetch jobs    | X             |
 | Add Job       | X             |
-| Remove Job    | O             |
-| Update Job    | O             |
+| Remove Job    |               |
+| Update Job    |               |
+| Create User    |              |
+| Delete User    |               |
+| Update User    |               |
+
 ## Launch our app
 You need to install webpack globally before installing the app.
 `npm install -g webpack`
