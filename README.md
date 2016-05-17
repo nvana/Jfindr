@@ -3,14 +3,13 @@ App based on ReactJs and NodeJS/MongoDB
 ## What is it ?
 Jfindr allow your company to easily manage your CV database. And it will make it easier for people to apply your positions.
 
-| Todo     |     Done    | 
-| ------------- |: -------------: | 
-| Fetch all jobs      |        X        |
-| Add a job       |       X        |
-| Remove Job      |               |
-| Modify Job      |               |
-| Add account      |               |
-
+| Todo           |     Done      | 
+| -------------  |: -----------: | 
+| Fetch all jobs |        X      |
+| Add a job      |       X       |
+| Remove Job     |               |
+| Modify Job     |               |
+| Add account    |               |
 
 ## Launch our app
 You need to install webpack globally before installing the app.
