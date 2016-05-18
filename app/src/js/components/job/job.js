@@ -25,6 +25,7 @@ export default class Job extends React.Component {
         <p><b>Ville :</b> {this.props.city}</p>
         <p><b>Créateur :</b> {this.props.author}</p>
         <p><b>Date de mise en ligne :</b> {this.props.date}</p>
+        <a class="waves-effect waves-light btn">Remove</a>
       </li>
     );
   }
