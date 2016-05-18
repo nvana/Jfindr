@@ -1,4 +1,5 @@
 import React from "react";
+import * as JobsAction from "../../actions/jobs/JobsAction";
 
 export default class Job extends React.Component {
   constructor(props) {
@@ -13,8 +14,11 @@ export default class Job extends React.Component {
     this.date = "loading"
   }
 
+  handleRemove(data) {
+    console.log(data);
+    JobsAction.removeJob(data);
+  }
   render() {
-
     return (
       <li class="collection-item">
         <h4>{this.props.libelle}</h4>
@@ -25,7 +29,7 @@ export default class Job extends React.Component {
         <p><b>Ville :</b> {this.props.city}</p>
         <p><b>Créateur :</b> {this.props.author}</p>
         <p><b>Date de mise en ligne :</b> {this.props.date}</p>
-        <a class="waves-effect waves-light btn">Remove</a>
+        <a class="waves-effect waves-light btn" onClick={this.handleRemove.bind(this, this.props)}>Remove</a>
       </li>
     );
   }

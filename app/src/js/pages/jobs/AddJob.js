@@ -9,7 +9,6 @@ export default class Featured extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    console.log(this)
     JobsAction.addJob({
       "libelle" : document.getElementById('libelle').value,
       "company" : document.getElementById('company').value,
@@ -68,7 +67,7 @@ export default class Featured extends React.Component {
                 <input placeholder="Ex : 10/07/2016" id="date" type="text" class="validate"/>
                 <label class="active" for="date">Date</label>
               </div>
-              <button  class="btn waves-effect waves-light">Submit</button>
+              <button class="btn waves-effect waves-light">Submit</button>
             </div>
           </form>
         </div>
