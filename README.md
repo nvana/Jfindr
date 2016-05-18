@@ -8,7 +8,6 @@ Jfindr allow your company to easily manage your CV database. And it will make it
 | Fetch jobs    | X             |
 | Add Job       | X             |
 | Remove Job    | X             |
-| Data-binder elements    |               |
 | Update Job    |               |
 | Create User    |              |
 | Delete User    |               |
