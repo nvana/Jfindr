@@ -8,7 +8,8 @@ export function removeJob(item) {
         type: "DELETE",
         cache: false,
         success: function(data) {
-           dispatcher.dispatch({type: "RECEIVE_JOBS", data});
+           dispatcher.dispatch({type: "REMOVE_JOB", data});
+           fetchJobs()
         }.bind(this),
         error: function(xhr, status, err) {
           console.error("http://localhost:3000/api/jobs", status, err.toString());
@@ -39,6 +40,7 @@ export function addJob(form) {
         cache: false,
         success: function(form) {
            dispatcher.dispatch({type: "CREATE_JOBS", form});
+           fetchJobs()
         }.bind(this),
         error: function(xhr, status, err) {
           console.error("http://localhost:3000/api/jobs", status, err.toString());
