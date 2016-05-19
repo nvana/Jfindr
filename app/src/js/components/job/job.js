@@ -15,7 +15,9 @@ export default class Job extends React.Component {
   }
 
   handleRemove(data) {
-    console.log(data);
+    JobsAction.removeJob(data);
+  }
+  handleEdit(data) {
     JobsAction.removeJob(data);
   }
   render() {
@@ -30,6 +32,7 @@ export default class Job extends React.Component {
         <p><b>Créateur :</b> {this.props.author}</p>
         <p><b>Date de mise en ligne :</b> {this.props.date}</p>
         <a class="waves-effect waves-light btn" onClick={this.handleRemove.bind(this, this.props)}>Remove</a>
+        <a class="waves-effect waves-light btn" onClick={this.handleEdit.bind(this, this.props)}>Edit</a>
       </li>
     );
   }
