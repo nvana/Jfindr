@@ -9,7 +9,6 @@ class JobsStore extends EventEmitter {
   }
 
   getAll() {
-    console.log("store getALL")
     return this.jobs;
   }
 
@@ -21,11 +20,9 @@ class JobsStore extends EventEmitter {
       }
       case "REMOVE_JOB": {
         this.emit("change");
-        console.log(this.jobs)
         break;
       }
       case "RECEIVE_JOBS": {
-        console.log("dispatcher here")
         this.jobs = action.data;
         this.emit("change");
         break;

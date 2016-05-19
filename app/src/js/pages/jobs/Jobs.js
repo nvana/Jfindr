@@ -24,11 +24,9 @@ export default class Featured extends React.Component {
   /*********************************/
 
   getJobs() {
-    console.log('getJobs update')
     this.setState({
       jobs: JobsStore.getAll(),
     });
-    console.log(this.state.jobs)
   }
 
 
