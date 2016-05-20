@@ -1,5 +1,5 @@
 # Jfindr
-App based on ReactJs and NodeJS/MongoDB
+App based on ReactJs and NodeJS(express)/MongoDB
 ## What is it ?
 Jfindr allow your company to easily manage your CV database. And it will make it easier for people to apply your positions.
 
@@ -22,6 +22,8 @@ Start mongod, make sure your database is started then :
 `node rest/serveur.js`
 
 ## Launching React App
+`npm install -g webpack`
+
 `cd app`
 
 `npm install`
