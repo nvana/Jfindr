@@ -22,7 +22,6 @@ export default class Job extends React.Component {
     JobsAction.editJob(data);
   }
   render() {
-    var a = 1;
     return (
       <li class="collection-item">
         <h4>{this.props.libelle}</h4>
@@ -34,7 +33,6 @@ export default class Job extends React.Component {
         <p><b>Créateur :</b> {this.props.author}</p>
         <p><b>Date de mise en ligne :</b> {this.props.date}</p>
         <a class="waves-effect waves-light btn" onClick={this.handleRemove.bind(this, this.props)}><i class="material-icons left">delete</i>Remove</a>
-        <a class="waves-effect waves-light btn" onClick={this.handleEdit.bind(this, this.props)}><i class="material-icons left">mode_edit</i>Edit</a>
         <Link class="waves-effect waves-light btn" to={`/jobs/edit/${this.props._id}`}><i class="material-icons left">mode_edit</i>Edit</Link>
       </li>
     );

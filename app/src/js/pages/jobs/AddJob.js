@@ -5,7 +5,7 @@ import JobsStore from "../../stores/jobs/JobsStore";
 import Job from "../../components/job/job"
 
 
-export default class Featured extends React.Component {
+export default class AddJob extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()

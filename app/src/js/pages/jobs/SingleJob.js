@@ -1,11 +1,11 @@
 import React from "react";
 
-import * as TodoActions from "../../actions/jobs/JobsAction";
+import * as JobsAction from "../../actions/jobs/JobsAction";
 import JobsStore from "../../stores/jobs/JobsStore";
 import Job from "../../components/job/job"
 
 
-export default class Jobs extends React.Component {
+export default class SingleJob extends React.Component {
   constructor() {
     super();
     this.getJobs = this.getJobs.bind(this);
@@ -32,9 +32,16 @@ export default class Jobs extends React.Component {
 
   render() {
     const { jobs } = this.state;
-      return (
+    const tab = (jobs).map((job)=>{
+      return <Job key={job.id} {...job} />
+    });
+
+    return (
       <div>
-        {this.props.children}
+        <h1>List of jobs</h1>
+        <ul class="collection">
+          {tab} 
+        </ul>
       </div>
     );
   }

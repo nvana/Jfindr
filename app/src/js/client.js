@@ -6,6 +6,7 @@ import Layout from "./pages/Layout";
 import FetchJob from "./pages/jobs/FetchJob";
 import AddJob from "./pages/jobs/AddJob";
 import Jobs from "./pages/jobs/Jobs";
+import SingleJob from "./pages/jobs/SingleJob";
 import PageNotFound from "./pages/PageNotFound";
 
 const app = document.getElementById('app');
@@ -17,6 +18,7 @@ ReactDOM.render(
 		<Route path="jobs" component={Jobs}>
 	    	<Route path="add" component={AddJob}></Route>
 	    	<Route path="all" component={FetchJob}></Route>
+	    	<Route path="edit/:jobId" component={SingleJob}></Route>
 		</Route>
 		<Route path="*" component={PageNotFound} />
     </Route>
