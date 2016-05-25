@@ -5,7 +5,7 @@ import JobsStore from "../../stores/jobs/JobsStore";
 import Job from "../../components/job/job"
 
 
-export default class Featured extends React.Component {
+export default class FetchJob extends React.Component {
   constructor() {
     super();
     this.getJobs = this.getJobs.bind(this);
