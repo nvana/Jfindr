@@ -31,10 +31,6 @@ export default class SingleJob extends React.Component {
 
 
   render() {
-  	let { userID } = this.props.params
-    let { query } = this.props.location
-    console.log(userID)
-    console.log(query)
     const { jobs } = this.state;
     const tab = (jobs).map((job)=>{
       return <Job key={job.id} {...job} />
