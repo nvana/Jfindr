@@ -8,39 +8,37 @@ import Job from "../../components/job/job"
 export default class SingleJob extends React.Component {
   constructor() {
     super();
-    this.getJobs = this.getJobs.bind(this);
+    this.getJobs = this.getJobById.bind(this);
     this.state = {
-      jobs: JobsStore.getAll(),
+      jobs: JobsStore.getJobById("573723a361db853c2a751d08"),
     };
+    console.log(this.state)
   }
 
   /* Activate listeners of store */
   componentWillMount() {
-    JobsStore.on("change", this.getJobs);
+    JobsStore.on("change", this.getJobById("573723a361db853c2a751d08"));
   }
   componentWillUnmount() {
-    JobsStore.removeListener("change", this.getJobs);
+    JobsStore.removeListener("change", this.getJobById("573723a361db853c2a751d08"));
   }
   /*********************************/
 
-  getJobs() {
+  getJobById() {
     this.setState({
-      jobs: JobsStore.getAll(),
+      jobs: JobsStore.getJobById("573723a361db853c2a751d08"),
     });
   }
 
 
   render() {
-    const { jobs } = this.state;
-    const tab = (jobs).map((job)=>{
-      return <Job key={job.id} {...job} />
-    });
+    const { job } = this.state;
 
     return (
       <div>
-        <h1>List of jobs</h1>
+        <h1>Job</h1>
         <ul class="collection">
-          {tab} 
+          {job} 
         </ul>
       </div>
     );

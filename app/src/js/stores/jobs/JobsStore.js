@@ -11,6 +11,9 @@ class JobsStore extends EventEmitter {
   getAll() {
     return this.jobs;
   }
+  getJobById(id) {
+    return JobsAction.getJobById(id);
+  }
 
   handleActions(action) {
     switch(action.type) {
@@ -25,6 +28,12 @@ class JobsStore extends EventEmitter {
       case "RECEIVE_JOBS": {
         this.jobs = action.data;
         this.emit("change");
+        break;
+      }
+      case "RECEIVE_JOBS_BY_ID": {
+        this.jobs = action.data;
+        this.emit("change");
+        console.log(this.jobs)
         break;
       }
     }

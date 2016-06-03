@@ -47,3 +47,19 @@ export function addJob(form) {
         }.bind(this)
       });
 }
+
+export function getJobById(id) {
+    $.ajax({
+        url: "http://www.localhost:3000/api/jobs/"+id,
+        dataType: 'json',
+        type: "GET",
+        cache: false,
+        success: function(form) {
+           dispatcher.dispatch({type: "RECEIVE_JOBS_BY_ID", form});
+           //fetchJobs()
+        }.bind(this),
+        error: function(xhr, status, err) {
+          console.error("http://localhost:3000/api/jobs/:id", status, err.toString());
+        }.bind(this)
+      });
+}
