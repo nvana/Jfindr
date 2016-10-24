@@ -13,12 +13,9 @@ Jfindr allow your company to easily manage your CV database. And it will make it
 | Delete User    |               |
 | Update User    |               |
 
-## Launch our app
-You need to install webpack globally before installing the app.
-`npm install -g webpack`
-
-### Launching API
-Start mongod, make sure your database is started then :
+## Launching API
+First, make `npm install` to make sure you have all node modules.
+Then start mongod, and execute :
 `node rest/serveur.js`
 
 ## Launching React App
